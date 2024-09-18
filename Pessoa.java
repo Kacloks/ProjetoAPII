@@ -2,8 +2,8 @@ public class Cliente extends Pessoa {
     private String preferenciaProduto;
 
     public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) {
-        super(nome, idade, tipoDocumento);  // Chama o construtor da classe Pessoa
-        this.preferenciaProduto = preferenciaProduto;  // Inicializa a preferência do produto
+        super(nome, idade, tipoDocumento);
+        this.preferenciaProduto = preferenciaProduto;
     }
 
     @Override

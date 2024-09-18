@@ -18,4 +18,8 @@ public class Cliente extends Pessoa {
     public String getTipoPessoa() {
         return "Cliente";
     }
+
+    public enum TipoDocumento {
+        CPF, RG, CNH
+    }
 }

@@ -18,4 +18,9 @@ public class Funcionario extends Pessoa {
     public String getTipoPessoa() {
         return "Funcionario";
     }
+
+    public enum TipoDocumento {
+    CPF, RG, CNH
+}
+
 }

@@ -3,9 +3,9 @@ public abstract class Pessoa {
     private int idade;
     private TipoDocumento tipoDocumento;
 
-    public Pessoa(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalidaException {
+    public Pessoa(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalida {
         if (idade < 0) {
-            throw new IdadeInvalidaException("Idade não pode ser negativa.");
+            throw new IdadeInvalida("Idade não pode ser negativa.");
         }
         this.nome = nome;
         this.idade = idade;

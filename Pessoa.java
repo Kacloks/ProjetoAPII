@@ -1,21 +1,31 @@
-public class Cliente extends Pessoa {
-    private String preferenciaProduto;
+public abstract class Pessoa {
+    private String nome;
+    private int idade;
+    private TipoDocumento tipoDocumento;
 
-    public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) {
-        super(nome, idade, tipoDocumento);
-        this.preferenciaProduto = preferenciaProduto;
+    public Pessoa(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalidaException {
+        if (idade < 0) {
+            throw new IdadeInvalidaException("Idade não pode ser negativa.");
+        }
+        this.nome = nome;
+        this.idade = idade;
+        this.tipoDocumento = tipoDocumento;
     }
 
-    @Override
-    public void exibirInformacoes() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("Idade: " + getIdade());
-        System.out.println("Preferência de Produto: " + preferenciaProduto);
-        System.out.println("Tipo de Documento: " + getTipoDocumento());
+    public String getNome() {
+        return nome;
     }
 
-    @Override
-    public String getTipoPessoa() {
-        return "Cliente";
+    public int getIdade() {
+        return idade;
     }
+
+    public TipoDocumento getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public abstract void exibirInformacoes();
+
+    public abstract String getTipoPessoa();
 }
+

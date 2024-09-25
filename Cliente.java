@@ -1,7 +1,7 @@
 public class Cliente extends Pessoa {
     private String preferenciaProduto;
 
-    public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) {
+    public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) throws IdadeInvalidaException {
         super(nome, idade, tipoDocumento);
         this.preferenciaProduto = preferenciaProduto;
     }
@@ -17,9 +17,5 @@ public class Cliente extends Pessoa {
     @Override
     public String getTipoPessoa() {
         return "Cliente";
-    }
-
-    public enum TipoDocumento {
-        CPF, RG, CNH
     }
 }

@@ -6,6 +6,11 @@ public class Funcionario extends Pessoa {
         this.cargo = cargo;
     }
 
+    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalida {
+        super(nome, idade, tipoDocumento);
+        this.cargo = "Cargo não informado";
+    }
+
     @Override
     public void exibirInformacoes() {
         System.out.println("Nome: " + getNome());

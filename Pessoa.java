@@ -3,6 +3,8 @@ public abstract class Pessoa {
     private int idade;
     private TipoDocumento tipoDocumento;
 
+    private static int contadorDePessoa = 0;
+
     public Pessoa(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalidaException {
         if (idade < 0) {
             throw new IdadeInvalidaException("Idade não pode ser negativa.");
@@ -10,6 +12,11 @@ public abstract class Pessoa {
         this.nome = nome;
         this.idade = idade;
         this.tipoDocumento = tipoDocumento;
+        contadorDePessoas++;
+    }
+
+    public static int getCOntadorDePessoas() {
+        return contadorDePessoas;
     }
 
     public String getNome() {

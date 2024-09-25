@@ -1,5 +1,5 @@
-public class IdadeInvalida extends Exception {
-  public IdadeInvalida(String mensagem) {
-    super(mensagem);
-  }
+public class IdadeInvalidaException extends Exception {
+    public IdadeInvalidaException(String mensagem) {
+        super(mensagem);
+    }
 }

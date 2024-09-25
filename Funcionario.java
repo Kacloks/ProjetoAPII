@@ -1,7 +1,7 @@
 public class Funcionario extends Pessoa {
     private String cargo;
 
-    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) {
+    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) throws IdadeInvalidaException {
         super(nome, idade, tipoDocumento);
         this.cargo = cargo;
     }
@@ -18,9 +18,4 @@ public class Funcionario extends Pessoa {
     public String getTipoPessoa() {
         return "Funcionario";
     }
-
-    public enum TipoDocumento {
-    CPF, RG, CNH
-}
-
 }

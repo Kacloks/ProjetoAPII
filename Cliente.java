@@ -1,9 +1,14 @@
 public class Cliente extends Pessoa {
     private String preferenciaProduto;
 
-    public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) throws IdadeInvalidaException {
+    public Cliente(String nome, int idade, TipoDocumento tipoDocumento, String preferenciaProduto) throws IdadeInvalida {
         super(nome, idade, tipoDocumento);
         this.preferenciaProduto = preferenciaProduto;
+    }
+
+    public Cliente(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalida {
+        super(nome, idade, tipoDocumento);
+        this.preferenciaProduto = "Preferência não informada";
     }
 
     @Override

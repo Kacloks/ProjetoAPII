@@ -1,14 +1,14 @@
 public class Funcionario extends Pessoa {
     private String cargo;
 
-    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) throws IdadeInvalidaException {
+    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) throws IdadeInvalida {
         super(nome, idade, tipoDocumento);
         this.cargo = cargo;
     }
 
     public Funcionario(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalida {
         super(nome, idade, tipoDocumento);
-        this.cargo = "Cargo não informado";
+        this.cargo = "Cargo não informado"; 
     }
 
     @Override

@@ -1,12 +1,12 @@
 public class Funcionario extends Pessoa {
     private String cargo;
 
-    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) throws IdadeInvalida {
+    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento, String cargo) throws IdadeInvalidaException {
         super(nome, idade, tipoDocumento);
         this.cargo = cargo;
     }
 
-    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalida {
+    public Funcionario(String nome, int idade, TipoDocumento tipoDocumento) throws IdadeInvalidaException {
         super(nome, idade, tipoDocumento);
         this.cargo = "Cargo não informado"; 
     }
@@ -23,4 +23,11 @@ public class Funcionario extends Pessoa {
     public String getTipoPessoa() {
         return "Funcionario";
     }
+
+    public static class IdadeInvalida extends Exception {
+
+        public IdadeInvalida() {
+        }
+    }
+
 }

@@ -12,11 +12,11 @@ public abstract class Pessoa {
         this.nome = nome;
         this.idade = idade;
         this.tipoDocumento = tipoDocumento;
-        contadorDePessoas++;
+        contadorDePessoa++;
     }
 
     public static int getCOntadorDePessoas() {
-        return contadorDePessoas;
+        return contadorDePessoa;
     }
 
     public String getNome() {
